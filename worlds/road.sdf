@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdf version="1.9">
   <world name="road">
+    <scene>
+      <sky></sky>
+    </scene>
     <physics type="ode">
       <max_step_size>0.004</max_step_size>
       <real_time_factor>1.0</real_time_factor>
@@ -163,6 +166,430 @@
       <background>0.7 0.7 0.7 1</background>
       <shadows>true</shadows>
     </scene>
+
+    <model name="tree1">
+      <static>true</static>
+      <link name="trunk">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Trunk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                   <albedo_map>BarkDecidious0194_7_S.jpg</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <link name="leaves">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Leaves.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                    <albedo_map>Leaves0142_4_S.png</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <pose>-15 0 0 0 -0 0</pose>
+    </model>
+
+    <model name="tree2">
+      <static>true</static>
+      <link name="trunk">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Trunk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                   <albedo_map>BarkDecidious0194_7_S.jpg</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <link name="leaves">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Leaves.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                    <albedo_map>Leaves0142_4_S.png</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <pose>15 -50 0 0 -0 0</pose>
+    </model>
+
+    <model name="tree3">
+      <static>true</static>
+      <link name="trunk">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Trunk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                   <albedo_map>BarkDecidious0194_7_S.jpg</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <link name="leaves">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Leaves.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                    <albedo_map>Leaves0142_4_S.png</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <pose>15 70 0 0 -0 0</pose>
+    </model>
+
+    <model name="tree4">
+      <static>true</static>
+      <link name="trunk">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Trunk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                   <albedo_map>BarkDecidious0194_7_S.jpg</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <link name="leaves">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Leaves.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                    <albedo_map>Leaves0142_4_S.png</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <pose>-45 -20 0 0 -0 0</pose>
+    </model>
+
+    <model name="tree5">
+      <static>true</static>
+      <link name="trunk">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Trunk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                   <albedo_map>BarkDecidious0194_7_S.jpg</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <link name="leaves">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Leaves.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                    <albedo_map>Leaves0142_4_S.png</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <pose>40 -20 0 0 -0 0</pose>
+    </model>
+
+    <model name="tree6">
+      <static>true</static>
+      <link name="trunk">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Trunk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                   <albedo_map>BarkDecidious0194_7_S.jpg</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <link name="leaves">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Leaves.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                    <albedo_map>Leaves0142_4_S.png</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <pose>-28 -10 0 0 -0 0</pose>
+    </model>
+
+    <model name="tree7">
+      <static>true</static>
+      <link name="trunk">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Trunk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                   <albedo_map>BarkDecidious0194_7_S.jpg</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <link name="leaves">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Leaves.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                    <albedo_map>Leaves0142_4_S.png</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <pose>-40 60 0 0 -0 0</pose>
+    </model>
+
+    <model name="tree8">
+      <static>true</static>
+      <link name="trunk">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Trunk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                   <albedo_map>BarkDecidious0194_7_S.jpg</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <link name="leaves">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Leaves.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                    <albedo_map>Leaves0142_4_S.png</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <pose>-45 -60 0 0 -0 0</pose>
+    </model>
+
+    <model name="tree9">
+      <static>true</static>
+      <link name="trunk">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Trunk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                   <albedo_map>BarkDecidious0194_7_S.jpg</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <link name="leaves">
+        <visual name="leaves_visual">
+          <geometry>
+            <mesh>
+              <scale> 0.5 0.5 0.5 </scale>
+              <uri>Leaves.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <pbr>
+                <metal>
+                    <albedo_map>Leaves0142_4_S.png</albedo_map>
+                    <normal_map>Leaves0142_4_S.png</normal_map>
+                </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <pose>20 -60 0 0 -0 0</pose>
+    </model>
+
     <model name="ground_plane">
       <static>true</static>
       <link name="link">
@@ -194,8 +621,8 @@
             <specular>0.8 0.8 0.8 1</specular>
             <pbr>
                 <metal>
-                    <albedo_map>grass.jpg</albedo_map>
-                    <normal_map>grass.jpg</normal_map>
+                    <albedo_map>grass-4k.png</albedo_map>
+                    <normal_map>grass-4k.png</normal_map>
                 </metal>
             </pbr>
           </material>
