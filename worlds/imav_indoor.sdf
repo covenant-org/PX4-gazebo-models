@@ -14,6 +14,7 @@
     <plugin filename="gz-sim-air-pressure-system" name="gz::sim::systems::AirPressure"></plugin>
     <plugin filename="gz-sim-apply-link-wrench-system" name="gz::sim::systems::ApplyLinkWrench"></plugin>
     <plugin filename="gz-sim-navsat-system" name="gz::sim::systems::NavSat"></plugin>
+    <plugin filename="gz-sim-particle-emitter-system" name="gz::sim::systems::ParticleEmitter"></plugin>
     <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
       <render_engine>ogre2</render_engine>
     </plugin>
@@ -231,43 +232,6 @@
       <longitude_deg>8.546163739800146</longitude_deg>
       <elevation>0</elevation>
     </spherical_coordinates>
-    <model name="box">
-      <static>true</static>
-      <pose>-1 -1 0.1 0 0 0</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
-          </geometry>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.5 0.5 0.5 1</ambient>
-            <diffuse>0.5 0.5 0.5 1</diffuse>
-          </material>
-        </visual>
-      </link>
-      <plugin filename="gz-sim-logicalaudiosensorplugin-system" name="gz::sim::systems::LogicalAudioSensorPlugin">
-        <source>
-          <id>1</id>
-          <pose>0 0 0 0 0 0</pose>
-          <attenuation_function>linear</attenuation_function>
-          <attenuation_shape>sphere</attenuation_shape>
-          <inner_radius>1.0</inner_radius>
-          <falloff_distance>5.0</falloff_distance>
-          <volume_level>.8</volume_level>
-          <playing>true</playing>
-          <play_duration>0</play_duration>
-        </source>
-      </plugin>
-    </model>
     <!-- North Wall -->
     <model name="north_wall">
       <static>true</static>
@@ -682,31 +646,119 @@
       </link>
     </model>
     <!-- Sound boxes -->
-    <model name="white_board">
+    <model name="box">
       <static>true</static>
-      <pose>3 -4.94 2 1.57079632 0 3.141569</pose>
+      <pose>-1 -1 0.1 0 0 0</pose>
       <link name="link">
         <collision name="collision">
           <geometry>
-            <plane>
-              <size>1.5 1.2</size>
-            </plane>
+            <box>
+              <size>.60 .60 0.3</size>
+            </box>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
-            <plane>
-              <size>1.5 1.2</size>
-            </plane>
+            <box>
+              <size>.60 .60 0.3</size>
+            </box>
           </geometry>
           <material>
-            <ambient>0.95 0.95 0.95 1.0</ambient>
-            <diffuse>0.98 0.98 0.98 1.0</diffuse>
-            <specular>0.9 0.9 0.9 1.0</specular>
-            <shininess>128</shininess>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <plugin filename="gz-sim-logicalaudiosensorplugin-system" name="gz::sim::systems::LogicalAudioSensorPlugin">
+        <source>
+          <id>1</id>
+          <pose>0 0 0 0 0 0</pose>
+          <attenuation_function>linear</attenuation_function>
+          <attenuation_shape>sphere</attenuation_shape>
+          <inner_radius>1.0</inner_radius>
+          <falloff_distance>5.0</falloff_distance>
+          <volume_level>.8</volume_level>
+          <playing>true</playing>
+          <play_duration>0</play_duration>
+        </source>
+      </plugin>
+    </model>
+    <model name="fake_box_1">
+      <static>true</static>
+      <pose>-2 -2.5 0.1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>.60 .60 0.3</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>.60 .60 0.3</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
           </material>
         </visual>
       </link>
     </model>
+    <model name="fake_box_2">
+      <static>true</static>
+      <pose>2 -2 0.1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>.60 .60 0.3</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>.60 .60 0.3</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="fake_box_3">
+      <static>true</static>
+      <pose>-3 -2 0.1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>.60 .60 0.3</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>.60 .60 0.3</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <include>
+      <uri>model://fog_generator</uri>
+      <pose relative_to="landing_zone">-0.25 -1.5 0 0 0 1.57079632</pose>
+      <scale>0.1</scale>
+    </include>
   </world>
 </sdf>
