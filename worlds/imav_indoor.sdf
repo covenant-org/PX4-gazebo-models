@@ -338,11 +338,44 @@
       <pose>-4.2 3 0.04 0 0 0</pose>
       <name>takeoff_zone</name>
     </include>
-    <include>
-      <uri>https://fuel.gazebosim.org/1.0/covenant-org/models/Landing Sign</uri>
+    <model name="landing_zone">
       <pose>-4.2 -3 0.04 0 0 0</pose>
-      <name>landing_zone</name>
-    </include>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 1 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <pbr>
+              <metal>
+                <albedo_map>model://landing-sign/landing.png</albedo_map>
+                <normal_map>model://landing-sign/landing.png</normal_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+      <!-- Plugin for oscillating motion -->
+      <plugin filename="OscillatingPlatformPlugin" name="gz::sim::covenant::OscillatingPlatformPlugin">
+        <amplitude>1.0</amplitude>
+        <period>4</period>
+        <axis>y</axis>
+        <link>link</link>
+      </plugin>
+    </model>
     <!-- Big Gates -->
     <include>
       <uri>https://fuel.gazebosim.org/1.0/covenant-org/models/Big gate</uri>
@@ -757,8 +790,7 @@
     </model>
     <include>
       <uri>model://fog_generator</uri>
-      <pose relative_to="landing_zone">-0.25 -1.5 0 0 0 1.57079632</pose>
-      <scale>0.1</scale>
+      <pose relative_to="landing_zone">0 -1.5 0 0 0 1.57079632</pose>
     </include>
   </world>
 </sdf>
