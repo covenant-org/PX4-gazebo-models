@@ -32,7 +32,7 @@
 					<izz>0.001</izz>
 				</inertia>
 			</inertial>
-			<visual>
+			<visual name="auxiliary_motor_visual">
 				<geometry>
 					<cylinder>
 						<radius>0.02</radius>
@@ -41,11 +41,5 @@
 				</geometry>
 			</visual>
 		</link>
-
-		<plugin name="auxiliary_motor_plugin" filename="libArduCopterIRLockPlugin.so">
-			<control_channel>8</control_channel> <!-- Maps to AUX1 -->
-			<joint_name>auxiliary_motor_joint</joint_name>
-			<turning_direction>ccw</turning_direction>
-		</plugin>
 	</model>
 </sdf>
